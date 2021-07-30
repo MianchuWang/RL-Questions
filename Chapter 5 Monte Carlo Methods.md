@@ -62,6 +62,25 @@ The MCES are finding the optimal policy based on two assumptions:
    Let's prove that: if the policy converges to a suboptimal, the value function will converge to the correpsonding value, 
    so the policy can be improved to a better policy. (Have not properly proved yet)
  
+ ## Question 6 What is on-policy? What is off-policy?
+ 
+ On-policy methods attempt to evaluate or improve the policy *that is used to make decisions*, 
+ whereas off-policy methods evaluate or improve a policy *different from that used to generate the data*.
+ 
+ ## Question 7 What is Monte Carlo Control without Exploring Starts?
+ 
+ Without exploring starts, it requires another way to guarantee exploration. Ɛ-greedy policies is used to increase exploration. 
+ 
+   **How to prove the policy improvement theorem?** Prove q<sub>π</sub>(s, π'(s)) > v<sub>π</sub>(s) (n.b., the policy is *soft*)
+   
+   **How to prove the policy converge to the optimal policy?** Following the definition of the optimal value function under Ɛ-greedy policy.
+   
+   
+ 
+ 
+ 
+ 
+ 
  
 
 
