@@ -31,3 +31,41 @@ Therefore, the agent does not know the value of other action, which makes policy
 
 For estimation of state value, which requires a model, the agent can sample many actions, and estimate the expected return of the next state, 
 and chooose the most promising action. Here all states can be visited.
+
+In Sutton's book, he proposes a exploration method named *exploring starts*, i.e., every state-action pair has a nonzero probability of being selected as the start.
+
+
+## Question 5 What is the Monte Carlo control with exploring starts?
+
+**Version 1 MCES based on GPI** 
+
+The MCES are finding the optimal policy based on two assumptions:
+   1. An infinite number of episodes, and
+   2. The episodes are generated with exploring starts.
+ 
+ Firstly, MCES estimates the action value function using an infinite number of epidoes.
+ Then, it does policy improvement (policy improvement theorem guarantees its convergence).
+ 
+ **Version 2 MCES based on value iteration**
+ 
+ The MCES are finding the optimal policy based on only one assumption: the episodes are generated with exploring starts.
+ Version 2.1 and Version 2.2 are algorithms that aims to remove the first assumption in Version 1.
+ 
+ **Version 2.1** This version uses a index to measure the error of the estimated action value. If the error is small enough, we can then do policy improvement. 
+ Although this approach can probably be made completely satisfactory in the sense of guaranteeing correct convergence up to some level of approximation. However, it is also likely to require far too many episodes to be useful in practice. 
+ 
+ **Version 2.2** This version is similar to value iteration that does not requires the completion of value evaluation. 
+ In MCES, update the policy under a state once the update the action value function of the state-action pair. 
+ 
+   **Problem of Version 2.2** Regardless the policy, all trajectories are saved to compute the action value function. 
+   Although the value function seems converge to a suboptimal policy(I think), it is easy to prove that the value function will converge to the optimal policy. 
+   Let's prove that: if the policy converges to a suboptimal, the value function will converge to the correpsonding value, 
+   so the policy can be improved to a better policy.
+ 
+ 
+
+
+
+
+
+
