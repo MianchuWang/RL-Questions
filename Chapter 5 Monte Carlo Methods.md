@@ -60,7 +60,7 @@ The MCES are finding the optimal policy based on two assumptions:
    **Problem of Version 2.2** Regardless the policy, all trajectories are saved to compute the action value function. 
    Although the value function seems converge to a suboptimal policy(I think), it is easy to prove that the value function will converge to the optimal policy. 
    Let's prove that: if the policy converges to a suboptimal, the value function will converge to the correpsonding value, 
-   so the policy can be improved to a better policy.
+   so the policy can be improved to a better policy. (Have not properly proved yet)
  
  
 
