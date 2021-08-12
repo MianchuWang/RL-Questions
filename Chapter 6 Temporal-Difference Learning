@@ -1,0 +1,11 @@
+# Chapter 6 Temporal-Difference Learning #
+
+## Question 1: What is Temporal-Difference Learning (TD)? What are its advantages?
+
+The most important concept is to use the reward and the value of the next state to approximate the value of the current state (TD(0), bootstrap).
+
+Advantages:
+1. no environment model.
+2. incremental and online learning. We do not need to update the function after an episode. 
+3. garantee convergence.
+4. quicker convergence. 
